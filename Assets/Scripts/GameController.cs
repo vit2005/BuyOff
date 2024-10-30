@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,8 +31,9 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject Disclaimer;
 
     private List<string> _lines;
-    private int _currentLine = -1;
-    private bool _isSoldier = true;
+    private int _currentLine = 0;
+    private int _currentSentence = 0;
+    private bool _isSoldier = false;
     private ScenarioPart _part;
 
     // Start is called before the first frame update
@@ -52,7 +55,6 @@ public class GameController : MonoBehaviour
 
     public bool ShowNextLine()
     {
-        _currentLine++;
         if (_currentLine == _lines.Count)
         {
             soldier.text = string.Empty;
@@ -60,12 +62,36 @@ public class GameController : MonoBehaviour
             AnimateLastScene();
             return false;
         }
-            
-        if (_isSoldier) soldier.text = _lines[_currentLine];
-        else police.text = _lines[_currentLine];
+
+        List<string> sentences = _lines[_currentLine].Split(". ").ToList();
+        string text = string.Empty;
+        if (sentences.Count > 1)
+        {
+            text = sentences[_currentSentence];
+
+            if (_currentSentence == sentences.Count-1)
+            {
+                _currentLine++;
+                _currentSentence = 0;
+            }
+            else
+            {
+                if (_currentSentence == 0) _isSoldier = !_isSoldier;
+                _currentSentence++;
+            }
+        }
+        else
+        {
+            text = _lines[_currentLine];
+            _currentLine++;
+            _isSoldier = !_isSoldier;
+            _currentSentence = 0;
+        }
+
+        if (_isSoldier) soldier.text = text;
+        else police.text = text;
         SwapColors();
         ProceedBlackOverlay();
-        _isSoldier = !_isSoldier;
         return true;
     }
 
