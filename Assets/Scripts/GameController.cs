@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI police;
     [SerializeField] private Image blackOverlay;
     [SerializeField] private RectTransform background;
+    [SerializeField] private GameObject vanSlidingDoorSound;
 
     [SerializeField] private Color activeSoldierColor;
     [SerializeField] private Color inactiveSoldierColor;
@@ -119,6 +120,7 @@ public class GameController : MonoBehaviour
 
     private void AnimateLastScene()
     {
+        vanSlidingDoorSound.SetActive(true);
         StartCoroutine(MoveImageLeft());
     }
 
@@ -138,6 +140,11 @@ public class GameController : MonoBehaviour
                 Mathf.Lerp(startPosition.x, startPosition.x - width/2f, progress),
                 startPosition.y
             );
+
+            Color color = blackOverlay.color;
+            float value = Mathf.Lerp(0.95f, 0f, progress);
+            color.a = value;
+            blackOverlay.color = color;
 
             yield return null;
         }
