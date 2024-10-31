@@ -130,7 +130,7 @@ public class GameController : MonoBehaviour
         float width = background.rect.width;
         float elapsedTime = 0f;
 
-        while (elapsedTime < 1f)
+        while (elapsedTime < 2f)
         {
             elapsedTime += Time.deltaTime;
             float progress = elapsedTime / 1f;
