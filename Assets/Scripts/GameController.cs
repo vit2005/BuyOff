@@ -31,6 +31,8 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject Credits;
     [SerializeField] private GameObject Disclaimer;
 
+    [SerializeField] private CameraShake CameraShake;
+
     private List<string> _lines;
     private int _currentLine = 0;
     private int _currentSentence = 0;
@@ -93,6 +95,7 @@ public class GameController : MonoBehaviour
         else police.text = text;
         SwapColors();
         ProceedBlackOverlay();
+        StopCameraShake(text);
         return true;
     }
 
@@ -113,9 +116,14 @@ public class GameController : MonoBehaviour
     private void ProceedBlackOverlay()
     {
         Color color = blackOverlay.color;
-        float value = 1f - ((float)_currentLine / _lines.Count) * 0.05f;
+        float value = 1f - ((float)_currentLine / _lines.Count) * 0.4f;
         color.a = value;
         blackOverlay.color = color;
+    }
+
+    private void StopCameraShake(string text)
+    {
+        if (text == "Ï³ä'¿æäæàºìî") CameraShake.StopCameraShake();
     }
 
     private void AnimateLastScene()
@@ -142,7 +150,7 @@ public class GameController : MonoBehaviour
             );
 
             Color color = blackOverlay.color;
-            float value = Mathf.Lerp(0.95f, 0f, progress);
+            float value = Mathf.Lerp(0.6f, 0f, progress);
             color.a = value;
             blackOverlay.color = color;
 

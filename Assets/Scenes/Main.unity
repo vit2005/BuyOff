@@ -179,7 +179,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0410\u0432\u0442\u043E\u0440: \n\n@Vit2005"
+  m_text: "\u0410\u0432\u0442\u043E\u0440 \u0441\u0446\u0435\u043D\u0430\u0440\u0456\u044E
+    \u0442\u0430 \u0440\u0435\u0436\u0438\u0441\u0435\u0440: \n@Vit2005\n\n\u0425\u0443\u0434\u043E\u0436\u043D\u0438\u0446\u044F:\n@rot_gar"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a68d65aff5dca444c9ebc76928e698a2, type: 2}
   m_sharedMaterial: {fileID: -6456354325377340674, guid: a68d65aff5dca444c9ebc76928e698a2, type: 2}
@@ -206,7 +207,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 68.45
+  m_fontSize: 120
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -546,6 +547,7 @@ GameObject:
   - component: {fileID: 448730052}
   - component: {fileID: 448730054}
   - component: {fileID: 448730053}
+  - component: {fileID: 448730055}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -570,7 +572,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 2, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 60.000015, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &448730053
 MonoBehaviour:
@@ -592,7 +594,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14263d7a1f434ed4c9265f7b0801ac17, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 40fdd2ebe2f13fb458f324c08d909521, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -610,6 +612,212 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448730051}
   m_CullTransparentMesh: 1
+--- !u!114 &448730055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448730051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 318ccf686629b714295117e505d05e55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bumpCurves:
+  - serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 1.4371719
+      outSlope: 1.4371719
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.7822597
+    - serializedVersion: 3
+      time: 0.2636368
+      value: -27.062431
+      inSlope: -22.830338
+      outSlope: -22.830338
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.80362684
+      value: 5.7597027
+      inSlope: 0.15825206
+      outSlope: 0.15825206
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.52286214
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -1.7632834
+      outSlope: -1.7632834
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.58072114
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  - serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 1.4371719
+      outSlope: 1.4371719
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.7822597
+    - serializedVersion: 3
+      time: 0.2636368
+      value: -27.062431
+      inSlope: -69.91829
+      outSlope: -69.91829
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.07365792
+    - serializedVersion: 3
+      time: 1.3765333
+      value: 4.851492
+      inSlope: 0.15825206
+      outSlope: 0.15825206
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.52286214
+    - serializedVersion: 3
+      time: 1.4990234
+      value: 1
+      inSlope: -1.7632834
+      outSlope: -1.7632834
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.58072114
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  - serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 1.4371719
+      outSlope: 1.4371719
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.7822597
+    - serializedVersion: 3
+      time: 0.24946153
+      value: -9.522014
+      inSlope: -4.6213856
+      outSlope: -4.6213856
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5463867
+      value: 0.2575531
+      inSlope: -1.7632834
+      outSlope: -1.7632834
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.58072114
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  minRandomTime: 1
+  maxRandomTime: 10
+  turnLeft:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 38.944847
+      outSlope: 38.944847
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.21749997
+      value: 9.470503
+      inSlope: 38.105263
+      outSlope: 38.105263
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.5797055
+      outWeight: 0.15168594
+    - serializedVersion: 3
+      time: 2.6551485
+      value: 11.019636
+      inSlope: -11.895611
+      outSlope: -11.895611
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.20751736
+    - serializedVersion: 3
+      time: 5.0030212
+      value: -0.41049194
+      inSlope: -2.5160964
+      outSlope: -2.5160964
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.23746559
+      outWeight: 0
+    m_PreInfinity: 1
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  turnRight:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -32.22984
+      outSlope: -32.22984
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.21484956
+      value: -5.924567
+      inSlope: -34.518265
+      outSlope: -34.518265
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.05070445
+    - serializedVersion: 3
+      time: 4.9857483
+      value: -0.22306824
+      inSlope: 0.2809022
+      outSlope: 0.2809022
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.07745542
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  minRandomTurnTime: 10
+  maxRandomTurnTime: 20
 --- !u!1 &501819216
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,7 +907,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 120
+  m_fontSizeMax: 105
   m_fontStyle: 0
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
@@ -962,7 +1170,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0412\u0456\u0434\u043A\u0443\u043F\u0438\u0442\u0438\u0441\u044C? (\u0422\u0430\u043A/\u041D\u0456)"
+  m_text: "\u0412\u0456\u0434\u043A\u0443\u043F\u0438\u0442\u0438\u0441\u044C?\n(\u0422\u0430\u043A/\u041D\u0456)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a68d65aff5dca444c9ebc76928e698a2, type: 2}
   m_sharedMaterial: {fileID: -6456354325377340674, guid: a68d65aff5dca444c9ebc76928e698a2, type: 2}
@@ -1236,7 +1444,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 120
+  m_fontSizeMax: 105
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -1322,6 +1530,7 @@ MonoBehaviour:
   GameTitle: {fileID: 882831535}
   Credits: {fileID: 180633156}
   Disclaimer: {fileID: 374892537}
+  CameraShake: {fileID: 448730055}
 --- !u!4 &1437338219
 Transform:
   m_ObjectHideFlags: 0
